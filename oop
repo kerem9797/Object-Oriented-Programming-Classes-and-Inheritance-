@@ -1,0 +1,69 @@
+class Bios():
+    def __init__(self,realm,substation,tribe,team,family,genus,type):
+        self.realm=realm
+        self.substation=substation
+        self.tribe=tribe
+        self.team=team
+        self.family=family
+        self.genus=genus
+        self.type=type
+class ProkaryotaeKingdom(Bios):
+    # Prokaryotes are spirulina(Mavi-Yesil Alg),bacteria(Bakteriler) etc.
+    # Choose one of them for substation
+    def __init__(self,realm,substation,tribe,team,family,genus,type,name):
+        Bios.__init__(self,realm,substation,tribe,team,family,genus,type)
+        self.name=name
+class ProtistaRealm(Bios):
+    # Protists are ameba(Amip),euglena(Oglena),paramecium(Paramesyum),plasmodium(Plazmodyum) etc.
+    # Choose one of them for substation
+    def __init__(self,realm,substation,tribe,team,family,genus,type,name):
+        Bios.__init__(self,realm,substation,tribe,team,family,genus,type)
+        self.name=name
+class FungusKingdom(Bios):
+    # Fungus are ustilaginales(Kuf Mantarlari),agaricaceae(Sapkali Mantarlari),melampsora(Pas Mantarlari),blastomycete(Maya Mantarlari) etc.
+    # Choose one of them for substation
+    def __init__(self,realm,substation,tribe,team,family,genus,type,name):
+        Bios.__init__(self,realm,substation,tribe,team,family,genus,type)
+        self.name=name
+class PlantKingdom(Bios):
+    # Non-Flowering Plants are pterophyta(Egrelti Otu),lichen(Liken),algae(Algler),marsh horsetail(At Kuyrugu),moss(Yosun),ground pine etc.
+    # Choose one of them for substation
+    # Flowering Plants are rose,apple etc.
+    # Choose one of them for substation
+    def __init__(self,realm,substation,tribe,team,family,genus,type,name):
+        Bios.__init__(self,realm,substation,tribe,team,family,genus,type)
+        self.name=name
+    def NonFloweringPlants(self):
+        print(f"{self.name} is a Non-Flowering Plants and are classified as {self.tribe} ")
+    def FloweringPlants(self):
+        print(f"{self.name} is a Flowering Plants and are classified as {self.tribe} ")
+        
+class AnimalKingdom(Bios):
+    # Invertebrates are sponges,cnidaria,worms,arthropods,mollusc,echinoderm
+    # Choose one of them for substation
+    # Vertebrates are fishes,frogs,reptiles,birds,mammals
+    # Choose one of them for substation
+    def __init__(self,realm,substation,tribe,team,family,genus,type,name):
+        Bios.__init__(self,realm,substation,tribe,team,family,genus,type)
+        self.name=name    
+    def InvertebrateAnimals(self):
+        print(f"{self.name} is a Invertebrates and are classified as {self.tribe} ")
+    def VertebrateAnimals(self):
+        print(f"{self.name} is a Vertebrates and are classified as {self.tribe} ")
+
+animal1=AnimalKingdom('Animals','Vertebrates','Mammels','Carnivora','Felines','Felis','leo','Felis leo')
+print(animal1.realm+' '+animal1.substation+' '+animal1.tribe+' '+animal1.team+' '+animal1.family+' '+animal1.genus+' '+animal1.type+' '+animal1.name)
+animal1.VertebrateAnimals()
+plant1=PlantKingdom('Plants','Seed Plants','Dicotyledons','Roses','Rosaceae','Rosa','alba','Rosa alba')
+print(plant1.realm+' '+plant1.substation+' '+plant1.tribe+' '+plant1.team+' '+plant1.family+' '+plant1.genus+' '+plant1.type+' '+plant1.name)
+plant1.FloweringPlants()
+fungus1=FungusKingdom('Mycetae','Mycota','Deuteromycetes','Moniliales','Moniliaceae','Histoplasma','capsulatum','Histoplasma capsulatum')
+print(fungus1.realm+' '+fungus1.substation+' '+fungus1.tribe+' '+fungus1.team+' '+fungus1.family+' '+fungus1.genus+' '+fungus1.type+' '+fungus1.name)
+            
+
+        
+
+
+
+
+
